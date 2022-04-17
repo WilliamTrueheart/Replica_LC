@@ -1,0 +1,210 @@
+* {
+    width: 100%;
+    margin:0; padding:0;
+}
+
+#nav_Top {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    display:flex;
+    align-items: center;
+    width:100%;
+    height:74px;
+}
+
+#nav_Top_SelectorsWrapper {
+    width:451px;
+    align-items: center;
+    position: absolute;
+    list-style-type: none;
+    height:50px;
+    display:flex; 
+    flex-direction: row;
+    font-size: .77rem;
+    gap:16.5px;
+    padding-left: 266px;
+}
+
+#nav_Logo {
+    width:178px;
+    padding-left: 64px;
+    cursor: pointer;
+}
+
+
+.nav_Top_Selectors {
+    color:#9b9b94;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width:max-content;
+    font-weight: 500;
+}
+
+.nav_Top_Selectors:hover {
+    color:#009ed6;
+    cursor:pointer;
+}
+
+#attendOnlineSelector {
+    margin-top: 15px;
+}
+
+#liveNow {
+    font-size: .5rem;
+}
+
+#currentSeries_BG {
+    width:100%;
+    height:354px;
+    background-image: url('backgroundImage.PNG');
+    background-size: cover;
+    color:white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    padding-left:70px;
+    padding-top:20px;
+    box-sizing: border-box;
+}
+
+#seriesTitle {font-size: 3rem;}
+#seriesDescription {
+    width:520px;
+    margin-top:20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+}   
+
+#learnMore {
+    background-color: #ffffff;
+    width:130px; height:35px;
+    border-radius: 18px;
+    color:#009ed6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+    margin-top:90px;
+    cursor: pointer;
+}
+
+#rightNav {
+    width:170px;
+    position:absolute;
+    right:57px;
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: .65rem;
+    align-items: center;
+    gap:8px;
+}
+#loginSelector:hover, #menuSelector:hover {
+    color:blue;
+    cursor: pointer;
+}
+
+.logInMenu {
+    width:23.5px;
+}
+.logInMenu2 {
+    width:35px;
+}
+
+
+
+@media (max-width: 1100px) {
+    .nav_Top_Selectors {
+        display: none;
+    }  
+}
+
+@media (max-width: 800px) {
+    #loginSelector, #menuSelector {
+       display: none;
+    } 
+    #rightNav {
+        position: absolute;
+        right:-90px;
+    }
+    #currentSeries_BG, #nav_Logo {
+        padding-left:20px;
+    }
+}
+
+#sectionOneWrapper {
+    background-color: white;
+    height:600px;
+    position: relative;
+    display:flex;
+}
+
+#hoverBoxWrapper {
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%; height:160px;
+    flex-direction: row;
+    gap:20px;
+    justify-content: center;
+}
+
+.hoverBoxes {
+    background-color: rgb(255, 255, 255);
+    height:137px; 
+    width:352px;
+    border-radius: 12px;
+    margin-top:-12px;
+    box-shadow: 0px 2px 3px 1px #cccccc;
+    display: flex;
+    align-items:center;   
+}
+.hoverBoxes:hover {
+    transform:translateY(-6px);
+    transition: all 1s;
+    cursor:pointer;
+}
+.hoverPhotos {
+    height:85px;
+    width:90px;
+    margin-left:15px; margin-top:-25px;
+}
+
+#hoverPhoto_1 {
+    background-image: url('hoverPhoto1.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#hoverPhoto_2 {
+    background-image: url('hoverPhoto2.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#hoverPhoto_3 {
+    background-image: url('hoverPhoto3.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hoverBox_Title {
+    position: absolute;
+    top:10px;
+    left:120px;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.hoverBox_Para {
+    position: absolute;
+    width:220px;
+    top:40px;
+    left:120px;
+    font-size: .7rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#box1, #box2, #box3 {
+    position: relative;
+}
+
