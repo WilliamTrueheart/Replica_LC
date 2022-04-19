@@ -473,6 +473,7 @@
     #s2_Title {
         width: 60%;
         align-self:center;
+        text-align: center;
         font-size: 2rem;
         margin-bottom: 30px;
     }
