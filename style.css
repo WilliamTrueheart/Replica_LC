@@ -438,6 +438,8 @@
   100% { color:black; }
 }
 
+
+
 @media (max-width: 1100px) {
     .nav_Top_Selectors {
         display: none;
@@ -514,9 +516,7 @@
         font-size: 2rem;
     }
     .hoverBoxes {
-        background-color: rgb(255, 255, 255);
-        height:137px; 
-        width:80%;
+        width:50%;
     }
     #footer_R {
         margin-left: 0px;
@@ -547,5 +547,8 @@
     }
     #sectionThreeWrapper {
         padding:20px 0px 20px 0px;
+    }
+    .hoverBoxes {
+        width:80%;
     }
 }
