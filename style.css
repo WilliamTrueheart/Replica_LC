@@ -1,5 +1,5 @@
 * {
-    width: 100%;
+    width: 100vw;
     margin:0; padding:0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
@@ -374,12 +374,14 @@
 }
 
 #liveNow, #attendOnlineSelector {
-    animation: blink 1s infinite;
+    animation: blink 2s infinite;
 }
 
 @keyframes blink 
 {  
   0% { color:black; }
+  50% { color:grey; }
+  100% { color:black; }
 }
  
 
