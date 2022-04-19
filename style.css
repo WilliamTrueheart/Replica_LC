@@ -525,4 +525,12 @@
     #currentSeries_BG, #nav_Logo {
         padding-left:20px;
     }
+    *, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    .hoverBoxes {
+        margin-top:50px;
+        margin-bottom:10px;
+    }
 }
