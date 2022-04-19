@@ -460,9 +460,10 @@
         align-items: center;
         gap:10px;
     }
+   
     #footer_R {
         width:100%;
-        padding-right: 0px;
+        padding-right:0px;
         height:max-content;
         display: flex;
         flex-direction: column;
@@ -515,6 +516,9 @@
         background-color: rgb(255, 255, 255);
         height:137px; 
         width:80%;
+    }
+    #footer_R {
+        margin-left: 0px;
     }
 
 }
