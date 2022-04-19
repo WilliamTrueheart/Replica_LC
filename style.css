@@ -1,508 +1,528 @@
-body {
-    background-color: rgb(0, 0, 0);
+* {
+    width: 100%;
     margin:0; padding:0;
-    font-size: 18px;
-   
-}
-
-/* The anchors are used for GitHub Link on the Contact Me tile */
-
-a, a:visited{
-    color: white;
-}
-
-a:hover {
-    color:rgb(18, 174, 174);
-}
-
-/* Main Wrapper is displayed behind Tile Board */
-
-#mainWrapper {
-    background-image: linear-gradient(to top, black,rgb(27, 27, 27) 100%);
-    width:100vw; height:100vh;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    margin:0; padding:0;
-}
-
-/* Tile Board Wrapper houses all 8 tiles */
-
-#tileBoardWrapper {
-    width:70vw; height:35vw;
-    display: flex;
-    box-shadow: 0px 0px 8px 1px rgb(0, 0, 0);
-    border-radius: 10px;
-    flex-wrap: wrap;
-    margin:0; padding:0;
-}
-
-.tiles {
-    width:25%; height:50%;
-    background-size: contain;
-    cursor: pointer;
-}
-.tiles:hover {
-    transform: scale(1.03);
-    transition: .2s;
-    box-shadow: rgb(68, 68, 68) 0px 0px 6px 2px;
-}
-#tileProfilePicture:hover {transform: scale(1);}
-
-#returnToTileBoard_BTN {
-    position: absolute;
-    left:6.5%; top:20px;
-    width:50px; height: 30px;
-    background-color: rgba(235, 235, 235, 0.608);
-    border-radius: 6px;
-    border:0px;
-    color:rgb(0, 0, 0);
-    display:none;
-    padding-bottom:4px;
-    box-sizing: border-box;
-    align-items: center; justify-content: center;
-}
-#returnToTileBoard_BTN:hover {cursor:pointer;color:rgb(0, 0, 0);background-color: rgb(255, 255, 255); }
-/*Below are all the images for the main Tiles*/
-
-#tileProfilePicture {
-    box-shadow: rgb(68, 68, 68) 0px 0px 0px 0px;
-    border-radius: 20px;
-    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-    background-size: 500% 500%;
-
-    -webkit-animation: rainbow 18s ease infinite;
-    -z-animation: rainbow 18s ease infinite;
-    -o-animation: rainbow 18s ease infinite;
-    animation: rainbow 18s ease infinite;}
-
-@-webkit-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
-}
-@-moz-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
-}
-@-o-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
-}
-@keyframes rainbow { 
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%};
-} 
-#profileImage { border-top-left-radius: 8px;}
-
-#profileImage2 {display:none; border-top-left-radius: 8px;
-}
-
-#aboutMe {
-    background-image: url("aboutMe.PNG");
-}
-#aboutMe:hover {
-    background-image: url("aboutMeHover.PNG");
-}
-
-#experience {
-    background-image: url("experience.PNG");
-}
-#portfolio {
-    background-image: url("portfolio.PNG");
-    border-top-right-radius: 8px;
-}
-#skills {
-    background-image: url("skills.PNG");
-    border-bottom-left-radius: 8px;
-}
-
-#interests {background-image: url("favorites.PNG");}
-#education {background-image: url("credentials.PNG");}
-#contact {background-image: url("contact.PNG");
-border-bottom-right-radius: 8px;
-}
-/* This is the display page once a tile is selected */
-
-
-.displayUI {
-    width:100vw; height:100vh;
-    display: none;
-    position: relative;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-image: linear-gradient(to right, rgb(34, 34, 36), #262627 50%);
-    border-radius: 0px;
-    justify-content: center; align-items: center;
 }
 
-/* Tile is a child of displayUI */
-
-.displayUITile {
-    width: 90%; height: 100%;
+#nav_Top {
+    background-color: rgb(255, 255, 255);
     position: relative;
-    display: flex;
-    justify-content: center;
-    background: rgb(33,33,33);
-    background: linear-gradient(140deg, rgba(33,33,33,1) 0%, rgba(61,61,61,1) 100%);
-}
-
-/* Below is the display for ABOUT ME */
-
-#display_AboutMe, #display_Skills, #display_Contact  {
-    background-image: url("UIBackground1.PNG");
-    background-size: cover;
-}
-
-#display_Experience, #display_Interests  {
-    background-image: url("UIBackground2.PNG");
-    background-size: cover;
-}
-
-#display_Portfolio, #display_Education  {
-    background-image: url("UIBackground3.PNG");
-    background-size: cover;
-}
-
-
-.uI_Title {
-    font-size: 1.5em;
-    color:white; 
-    position: absolute;
-    top:20%;
-    padding: 10px 20px 10px 20px;
-    background-color: rgba(22, 21, 21, 0.308);
-    box-shadow: white 0px 0px 4px .1px;
-}
-.uI_Title:hover {color:#839bed; cursor:default;}
-
-.uI_Para {
-    color:white; 
-    position: absolute;
-    top:44%; 
-}
-
-#uI_Para_Experience {
-    position: absolute;
-    width:75%;
-    padding: 20px;
-    background-color: rgba(22, 21, 21, 0.308);
-}
-
-#certWrapper {
-    width: 70%; height:40%;
-    margin-top: 15vh;
-    align-self: center;
     display:flex;
-    flex-direction: row;
-    gap:40px;
-    flex-wrap: wrap;
-    position: relative;
-    align-items: center; justify-content: center;
-}
-
-#educationInfo {
-    width: 90%;
-    color:white;
-    text-align: center;
-    font-size: .8rem;
-}
-
-#jsCert, #htmlCert {
-    width:40%;
-}
-
-/* Below are the Paragraphs for the 8 Tile UI's */
-
-#uI_Para_AboutMe {
-    color:rgb(255, 255, 255); 
-    position: absolute;
-    width:75%;
-    padding: 20px;
-    background-color: rgba(22, 21, 21, 0.308);
-}
-
-#uI_Para_Favorites {
-    width:75%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap:10px;
-    background-color: rgba(22, 21, 21, 0.308);
-    padding: 20px;
-}
-
-#uI_Para_Skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap:10px;
-    width:65%;
-    background-color: rgba(22, 21, 21, 0.308);
-    padding: 20px;
-}
-
-#uI_Para_Contact {
-background-color: rgba(22, 21, 21, 0.308);
-padding: 20px 20px 20px 20px;
-}
-
-.skills_Logo {
-    width:120px; 
-}
-
-/* Below is the Housing for the PORTFOLIO Tile */
-
-#portfolioDisplayWrapper {
-    align-self: center;
-    margin-top:15vh;
-    width:750px; height:40%;
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap:70px;justify-content: center;
-}
-
-
-#portfolio_Items_Wrapper {
-    position: absolute;
-    width:300px; height:300px;
-    background-image: linear-gradient(to right, rgb(60, 73, 103), rgb(35, 38, 62) 90%);
-    top:38%;
-    display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    align-self: center;
-   
+    width:100%;
+    height:74px;
 }
 
-.portfolio_Item {
-    width:99%;
-    display: flex;
+#nav_Top_SelectorsWrapper {
+    width:451px;
     align-items: center;
-    justify-content: center;
-    opacity: 40%;
-    height:47px;
-    font-size: .9rem;
-    background-color:rgb(255, 255, 255);
-}
-
-.portfolio_Item:hover {
-    color:black;
-    opacity: 90%;
-    cursor:pointer;
-    box-sizing: border-box;
-    border-bottom: #1ddde8 4px solid;
-    transform: scale(1.01);
-    transform: translateY(-2px);
-    transition: .5s;
-    background-image:linear-gradient(90deg, rgba(255, 255, 255, 0.565), rgba(255, 255, 255, 0.73) 20%);
-}
-
-.portfolio_display {
     position: absolute;
-    height:300px;
-    width:99%;
-    display:none;
-    justify-content: center;
-    background-color:rgb(255, 255, 255);
+    list-style-type: none;
+    height:50px;
+    display:flex; 
+    flex-direction: row;
+    font-size: .77rem;
+    gap:16.5px;
+    padding-left: 266px;
 }
 
-.porfolio_Display_Title {
-    font-size: .9rem;
-    left:10px;
-    position: absolute;
-}
-
-.portfolio_Desc {
-    color: #0a0433;
-    position: absolute;
-    top:50px;
-    padding: 0px 12px 0px 12px;
-    font-size: .7rem;
-}
-
-.showButton {
-    position: absolute;
-    display:none;
-    justify-content: center;
-    font-size: .6rem;
-    height:min-content; width:90%;
-    text-align: center;
-    background-color: #81b7ca50;
-    top:160px;
-    padding:10px;
+#nav_Logo {
+    width:179px;
+    padding-left: 64px;
     cursor: pointer;
-    word-wrap: break-word;
-}
-
-#foxmithLink {
-    position: absolute;
-    top:120px;
-    display:none;
-    color:black;
-    font-size: .8rem;
-}
-#lC_Link {
-    position: absolute;
-    top:120px;
-    color:black;
-    display:none;
-    font-size: .8rem;
-}
-
-#pItem3Form {
-margin-top:15px;
-padding-bottom: 15px;
-}
-
-#item3Sub{
-    height:20px; width:60px;
-    border-radius: 6px;
-    background-color: rgb(223, 188, 188);
-}
-.portItem3Input {
-    height:20px; width:100px;
 }
 
 
-#returnFromPortfolioItem {
-    position: absolute;
-    right:10px; top:10px;
-    background-color: rgb(0, 0, 0);
-    width:40px; height:20px;
-    border-radius: 6px;
-    color:white;
-    font-size: .6rem;
-    display: flex;
+.nav_Top_Selectors {
+    color:#9b9b94;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width:max-content;
+    font-weight: 500;
+}
+
+.nav_Top_Selectors:hover {
+    color:#009ed6;
     cursor:pointer;
-    align-items: center; justify-content: center;
 }
 
-#returnFromPortfolioItem:hover {
-    background-color: #0a0433;
+#attendOnlineSelector {
+    margin-top: 15px;
+}
+
+#liveNow {
+    font-size: .5rem;
+}
+
+#currentSeries_BG {
+    width:100%;
+    height:394px;
+    background-image: url('backgroundImage.PNG');
+    background-size: cover;
+    color:white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    padding-left:70px;
+    padding-top:20px;
+    box-sizing: border-box;
+}
+
+#seriesTitle {font-size: 3rem;}
+#seriesDescription {
+    width:520px;
+    margin-top:20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+}   
+
+#learnMore {
+    background-color: #ffffff;
+    width:130px; height:37px;
+    border-radius: 18px;
+    color:#009ed6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+    margin-top:115px;
+    cursor: pointer;
+}
+
+#rightNav {
+    width:170px;
+    position:absolute;
+    right:57px;
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: .65rem;
+    align-items: center;
+    gap:8px;
+}
+#loginSelector:hover, #menuSelector:hover {
+    color:blue;
+    cursor: pointer;
+}
+
+.logInMenu {
+    width:23.5px;
+}
+.logInMenu2 {
+    width:35px;
 }
 
 
-.grey {color:rgb(201, 201, 201)}
-.mountain_Text {color:rgb(131, 243, 131);}
-.beach_Text {color:rgb(131, 170, 243);}
-.warm_Text {color:rgb(243, 131, 131);}
-.cold_Text {color:rgb(131, 221, 243);}
+#hoverBoxWrapper {
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%; height:max-content;
+    flex-direction: row;
+    gap:20px;
+    justify-content: center;
+}
 
-hr {background-color: black;}
+.hoverBoxes {
+    background-color: rgb(255, 255, 255);
+    height:137px; 
+    width:352px;
+    border-radius: 12px;
+    margin-top:-12px;
+    box-shadow: 0px 2px 3px 1px #cccccc;
+    display: flex;
+    align-items:center;   
+}
+.hoverBoxes:hover {
+    transform:translateY(-6px);
+    transition: all 1s;
+    cursor:pointer;
+}
+.hoverPhotos {
+    height:85px;
+    width:90px;
+    margin-left:15px; margin-top:-25px;
+}
 
+#hoverPhoto_1 {
+    background-image: url('hoverPhoto1.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#hoverPhoto_2 {
+    background-image: url('hoverPhoto2.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#hoverPhoto_3 {
+    background-image: url('hoverPhoto3.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
+.hoverBox_Title {
+    position: absolute;
+    top:10px;
+    left:120px;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
+.hoverBox_Para {
+    position: absolute;
+    width:220px;
+    top:40px;
+    left:120px;
+    font-size: .7rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
-@media screen and (max-width: 1000px) {
-    
-    .tiles {
-        width:50%; height:25%;
-    }
-    #tileBoardWrapper {
-        display:flex; flex-direction: row;
-        flex-wrap: wrap;
-        width:45vh;height:90vh;
-    }
-   
-    #aboutMe {
-        border-top-right-radius: 8px;
-    } 
-    #portfolio {
-        border-top-right-radius: 0px;
-    }
-    #education {
-        border-bottom-left-radius: 8px;
-    }
-    #skills {
-        border-bottom-left-radius: 0px;
-    }
-    .skills_Logo {
-        width:90px; 
-    }
+#box1, #box2, #box3 {
+    position: relative;
+}
 
-    #uI_Para_AboutMe {
-        font-size: .8em;
-    }
-    #uI_Para_Experience {
-        font-size: .8em;
-    }
+#sectionOneWrapper {
+    display:flex;
+    flex-wrap: wrap;
+    height:max-content;
+    justify-content: center;
+}
 
+#welcomeGreeting {
+    width:100%;
+    height:max-content;
+    display:flex;
+    flex-wrap: wrap;
+    position: relative;
+    gap:4%;
+    margin-top:80px;
+}
 
+#welcome_Text {
+    width:40%;
+    height:450px;
+    display: flex;
+    margin-left:6%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#welcome_Image {
+    width:50%;
+    height:450px;
+    background-image: url('coffee.PNG');
+    background-size: cover;
+}
+
+#welcome_Header {
+    width:max-content;
+    font-size: 2.3rem;
+    margin-top:30px;
+    margin-left:5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#welcome_Para {
+    width:520px;
+    font-size: 1rem;
+    margin-top:10px;
+    color: rgb(82, 82, 82);
+    margin-left:5px;
+    font-weight: lighter;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#welcomeButtons {
+    display:flex;
+    margin-top:40px;
+    gap:20px;
+}
+
+#whatToExpect {
+    cursor: pointer;
+    background-color: #009ecc;
+    width:150px; height:36px;
+    border-radius: 22px;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#whatToExpect:hover {
+    background-color: #03b6ed;
+    box-shadow: 0px 2px 4px 1px #8f8f8fae;
+}
+
+#findALocation {
+    cursor: pointer;
+    background-color: #ffffff;
+    width:150px; height:36px;
+    border-radius: 22px;
+    border:1px solid #009ccc4a;
+    color:#009ecc;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#findALocation:hover {box-shadow: 0px 2px 4px 1px #8f8f8fae;}
+
+#sectionTwoWrapper {
+    background-color: #009ecc;
+    width:100%;
+    height:400px;
+    background-image: url('sunset.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 16px;;
+    display:flex;
+    flex-direction: column;
+    color:white;
+    justify-content: center;
+    padding-left: 50%;
+    box-sizing: border-box;
+    gap:10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#s2_Title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+#s2_Para {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 70%;
+    margin-bottom: 60px;
+    font-size: .9rem;
+}
+
+#sectionThreeWrapper {
+    height:345px;
+    width:100%;
+    background-color: white;
+    color:black;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap:10px;
+}
+
+#s3_Title {
+    font-size: 2.5rem;
+    width:60%;
+}
+
+#s3_Para {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    width:60%;
+    color: rgb(82, 82, 82);
+}
+
+#askForPrayer_BTN {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width:180px;
+    height: max-content;
+    background-color: #009ecc;
+    box-sizing: border-box;
+    padding:8px 6px 8px 6px;
+    border-radius: 18px;
+    color:white;
+    margin-top: 20px;
+}
+#askForPrayer_BTN:hover {
+    box-shadow: 0px 2px 4px 1px #8f8f8fae;
+    background-color: #34bae3;
+    transition: 1s;
+    cursor: pointer;
+}
+
+#sectionFourWrapper {
+    height:345px;
+    width:100%;
+    background-color:  #f6f6f6;
+    color:black;
+    display:flex;
+    padding-top:70px;
+    padding-left: 70px;
+}
+
+#s4_TextWrapper {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+#s4_Title {
+    font-size: 2.2rem;
+}
+#s4_Para {
+    width:48%;
+    font-size: 1.2rem;
+    color: rgb(82, 82, 82);
+}
+
+#sectionFooter{
+    width: 100%;
+    height: 140px;
+    display:flex;
+    font-size: .82rem;
+}
+
+#liveNow, #attendOnlineSelector {
+    animation: blink 2s infinite;
+}
+
+.footerText {
+    width: max-content;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    color:rgb(0, 0, 0);
 }
 
 
+.footerLinks {
+    color:rgb(26, 194, 194);
+}
+.footerLinks:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
 
-@media screen and (max-width: 820px) and (max-height: 430px) {
-    #tileBoardWrapper {
-        width:80vw; height:40vw;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .tiles {
-        width:25%; height:50%;
-        background-size: contain;
-    }
-    #tileProfilePicture {
-        border-top-left-radius: 8px;
-    }
-    #portfolio {
-        border-top-right-radius: 8px;
-    }
-    #skills {
-        border-bottom-left-radius: 8px;
-    }
-    #contact {
-        border-bottom-right-radius: 8px;
-    }
-    #aboutMe {
-        border-top-right-radius: 0px;
-    } 
-    #portfolio {
-        border-top-right-radius: 8px;
-    }
-    #education {
-        border-bottom-left-radius: 0px;
-    }
-    .skills_Logo {
-        width:80px; 
-    }
-    #uI_AboutME_Para {
-        font-size: 12px;
-    }    
-    .portfolio_Apps {
-        height:150px; width:150px;
+#footer_L {
+    width:max-content;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 7%;
+    gap:10px;
+}
+
+#footer_R {
+    width:60%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right:7.5%;
+    justify-content: center;
+}
+
+#footerLinksWrapper {
+    width:max-content;
+    height: min-content;
+    justify-content: end;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap:10px;
+    padding-bottom: 20px;;
+}
+
+.footerLinks {
+    width:max-content;
+}
+
+
+@keyframes blink 
+{  
+  0% { color:black; }
+  50% { color:grey; }
+  100% { color:black; }
+}
  
-    }
-}
 
-
-@media screen and (max-width: 450px) {
-    .uI_Para {
-        top:29%;
+@media (max-width: 1100px) {
+    .nav_Top_Selectors {
+        display: none;
+    }  
+    #welcome_Text {
+        width:100%;
     }
-    .uI_Title {
-        top:15%;
+    #welcome_Image {
+        width:100%;
+    }
+    #sectionFooter{
+      flex-wrap: wrap;
+    }
+    #footer_L {
+        width:100%;
+        padding-left: 0%;
+        height:max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:10px;
+    }
+    #footer_R {
+        width:100%;
+        padding-right: 0px;
+        height:max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:10px;
+    }
+    #s2_Title {
+        width: 60%;
+        align-self:center;
+        font-size: 2rem;
+        margin-bottom: 30px;
     }
     
-    #jsCert, #htmlCert {
-        width:80%
+    #s2_Para {
+        align-self: center;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        width: 60%;
+        margin-bottom: 60px;
+        font-size: .9rem;   
+    }
+    #sectionTwoWrapper {
+        padding-left: 0%;
+    }
+    #welcome_Header {
+        width:90%;
+        text-align: center;
+    }
+    #welcome_Para {
+        width:90%;
+        text-align: center;
+    }
+    #seriesDescription {
+        width:80%;
+    }
+    #welcomeButtons {
+        padding-left:9.5%;
+    }
+    #sectionFourWrapper {
+        padding:0; margin:0;
+    }
+    #s4_TextWrapper {   
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    #s4_Title {
+        font-size: 2rem;
     }
 
-    #certWrapper {
-        margin-top:4vh;
-    }
-    .portfolio_Apps {
-        height:180px; width:180px;
-    }
+}
 
-    #portfolioDisplayWrapper {
-        margin-top:2vh;
+@media (max-width: 800px) {
+    #loginSelector, #menuSelector {
+       display: none;
+    } 
+    #rightNav {
+        position: absolute;
+        right:-90px;
     }
-
+    #currentSeries_BG, #nav_Logo {
+        padding-left:20px;
+    }
 }
