@@ -56,7 +56,7 @@
 #currentSeries_BG {
     width:100%;
     height:394px;
-    background-image: url('backgroundImage.PNG');
+    background-image: url('backgroundImage.jpg');
     background-size: cover;
     color:white;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -146,17 +146,17 @@
 }
 
 #hoverPhoto_1 {
-    background-image: url('hoverPhoto1.PNG');
+    background-image: url('hoverPhoto1.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 #hoverPhoto_2 {
-    background-image: url('hoverPhoto2.PNG');
+    background-image: url('hoverPhoto2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 #hoverPhoto_3 {
-    background-image: url('hoverPhoto3.PNG');
+    background-image: url('hoverPhoto3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -211,7 +211,7 @@
 #welcome_Image {
     width:50%;
     height:450px;
-    background-image: url('coffee.PNG');
+    background-image: url('coffee.jpg');
     background-size: cover;
 }
 
@@ -273,7 +273,7 @@
     background-color: #009ecc;
     width:100%;
     height:400px;
-    background-image: url('sunset.PNG');
+    background-image: url('sunset.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: 16px;;
@@ -376,6 +376,7 @@
 
 #liveNow, #attendOnlineSelector {
     animation: blink 2s infinite;
+    animation-timing-function: linear;
 }
 
 .footerText {
@@ -433,9 +434,8 @@
 
 @keyframes blink 
 {  
-  0% { color:black; }
-  50% { color:grey; }
-  100% { color:black; }
+  0% { color:grey; }
+  50% { color:black; }
 }
 
 
